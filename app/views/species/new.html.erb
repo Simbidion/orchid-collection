@@ -1,5 +1,11 @@
 <h1>This is the new page</h1>
-<p><%= notice %></p>
+
+<% if @species.errors.any? %>
+  <% @species.errors.full_messages.each do |error| %>
+    <%= error %><br>
+  <% end %>
+<% end %>
+
 <%= form_with(model: @species, local: true) do |f| %>
   <div>
     <%= f.label :sci_name %>
