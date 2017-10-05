@@ -1,0 +1,33 @@
+<h1>This is the new page</h1>
+<p><%= notice %></p>
+<%= form_with(model: @species, local: true) do |f| %>
+  <div>
+    <%= f.label :sci_name %>
+    <%= f.text_field :sci_name %>
+  </div>
+  <div>
+    <%= f.label :comm_name %>
+    <%= f.text_field :comm_name %>
+  </div>
+  <div>
+    <%= f.label :flower_time %>
+    <%= f.text_field :flower_time %>
+  </div>
+  <div>
+    <%= f.label :colour %>
+    <%= f.text_field :colour %>
+  </div>
+  <div>
+    <%= label :epiphyte, 'Epiphyte' %>
+    <%= f.radio_button(:epiphyte, true) %>
+    <%= label :epiphyte, 'Not an epiphyte' %>
+    <%= f.radio_button(:epiphyte, false) %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+  <%= f.button %>
+  </div>
+<% end %>

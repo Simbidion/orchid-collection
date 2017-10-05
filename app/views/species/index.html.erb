@@ -1,0 +1,8 @@
+<h1>Species#index</h1>
+<p>Find me in app/views/species/index.html.erb</p>
+
+<% @species_list.each do |specie| %>
+  <p>
+  <i><%= specie.sci_name %></i>: <%= specie.comm_name %>. Has <%= specie.colour %> flowers in <%= specie.flower_time %>. <%= specie.description %>.
+  </p>
+<% end  %>
