@@ -1,9 +1,12 @@
-<h1>This is the new page</h1>
+<nav class="nav">This is the new page</nav>
+
 
 <% if @species.errors.any? %>
-  <% @species.errors.full_messages.each do |error| %>
-    <%= error %><br>
-  <% end %>
+  <div class="alert alert-warning" role="alert">
+    <% @species.errors.full_messages.each do |error| %>
+      <%= error %><br>
+    <% end %>
+    </div>
 <% end %>
 
 <%= form_with(model: @species, local: true) do |f| %>
